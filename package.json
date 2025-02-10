@@ -1,0 +1,40 @@
+{
+  "name": "fx-protocol-sdk",
+  "version": "1.0.0",
+  "description": "sdk for fx-protocol projects",
+  "main": "index.js",
+  "repository": "",
+  "author": "",
+  "license": "MIT",
+  "scripts": {
+    "gen": "npx typechain --ts-nocheck --target=ethers-v6 './abi/**/*.json' --out-dir src/types",
+    "bot:fx": "yarn ts-node src/bots/fx/index.ts"
+  },
+  "dependencies": {
+    "@ethersproject/providers": "^5.7.2",
+    "@ethersproject/wallet": "^5.7.0",
+    "@snapshot-labs/snapshot.js": "^0.12.32",
+    "@typechain/ethers-v6": "^0.5.1",
+    "axios": "^1.7.7",
+    "commander": "^12.1.0",
+    "ethers": "^6.13.4",
+    "typechain": "^8.3.2",
+    "typescript": "^5.7.2"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^8.15.0",
+    "@typescript-eslint/parser": "^8.15.0",
+    "eslint": "^9.15.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-spellcheck": "^0.0.20",
+    "firebase": "^11.0.2",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.2.10",
+    "prettier": "^3.3.3",
+    "prettier-plugin-organize-imports": "^4.1.0",
+    "ts-node": "^10.9.2",
+    "tty-table": "^4.2.3",
+    "typedoc": "^0.26.11",
+    "typescript-eslint-language-service": "^5.0.5"
+  }
+}
